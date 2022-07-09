@@ -1,22 +1,64 @@
 [
     {
         "id": 1,
-        "from": 2,
-        "to": 1,
-        "viewed": true,
-        "sended": true,
-        "message": "olá",
-        "created_datetime": "2022-06-17 19:36:17",
-        "updated_datetime": "2022-06-17 19:36:17"
+        "userId": 1,
+        "chats": [
+            {
+                "id": 1,
+                "conversation": [
+                    {
+                        "id": 2,
+                        "from": 1,
+                        "to": 2,
+                        "viewed": false,
+                        "sended": true,
+                        "message": "olá",
+                        "created_datetime": "2022-06-17 19:56:17",
+                        "updated_datetime": "2022-06-17 19:56:17"
+                    },
+                    {
+                        "id": 3,
+                        "from": 2,
+                        "to": 1,
+                        "viewed": false,
+                        "sended": true,
+                        "message": "olá",
+                        "created_datetime": "2022-06-17 19:56:17",
+                        "updated_datetime": "2022-06-17 19:56:17"
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": 2,
-        "from": 1,
-        "to": 2,
-        "viewed": false,
-        "sended": true,
-        "message": "olá",
-        "created_datetime": "2022-06-17 19:56:17",
-        "updated_datetime": "2022-06-17 19:56:17"
+        "userId": 2,
+        "chats": [
+            {
+                "id": 1,
+                "conversation": [
+                    {
+                        "id": 2,
+                        "from": 1,
+                        "to": 2,
+                        "viewed": false,
+                        "sended": true,
+                        "message": "olá",
+                        "created_datetime": "2022-06-17 19:56:17",
+                        "updated_datetime": "2022-06-17 19:56:17"
+                    },
+                    {
+                        "id": 3,
+                        "from": 2,
+                        "to": 1,
+                        "viewed": false,
+                        "sended": true,
+                        "message": "olá",
+                        "created_datetime": "2022-06-17 19:56:17",
+                        "updated_datetime": "2022-06-17 19:56:17"
+                    }
+                ]
+            }
+        ]
     }
 ]
