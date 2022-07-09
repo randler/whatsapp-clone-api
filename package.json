@@ -1,0 +1,26 @@
+{
+  "name": "whatsapp-api",
+  "version": "0.0.1",
+  "description": "Api para o whatsapp clone",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Randler Ferraz",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "dotenv-safe": "^8.2.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.0",
+    "nodemon": "^2.0.19",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "start": "^5.1.0"
+  }
+}
