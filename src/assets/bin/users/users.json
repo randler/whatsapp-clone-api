@@ -18,5 +18,15 @@
         "photo": "https://u42.com.br/wp-content/uploads/2021/04/Viuva-Negra-Scarlet-Johansson.jpg",
         "token": "",
         "password": "$2a$10$gtafHUhqcnQ8IXokuaUIZ.j6//m.iVHbxwqlhXA3BGhiiR9ERZbHy"
+    },
+    {
+        "id": 3,
+        "name": "Diego Ferraz",
+        "phone": "77988172481",
+        "email": "diego@gmail.com.com",
+        "vefiryed": false,
+        "photo": "https://pps.whatsapp.net/v/t61.24694-24/160356883_1004451163432022_361939110201404045_n.jpg?ccb=11-4&oh=01_AVz7bX3ZzqSJjHKwV0NuRloamPYbJ4m4F0U3b2N-47xmHA&oe=62DC779C",
+        "token": "",
+        "password": "$2a$10$gtafHUhqcnQ8IXokuaUIZ.j6//m.iVHbxwqlhXA3BGhiiR9ERZbHy"
     }
 ]
