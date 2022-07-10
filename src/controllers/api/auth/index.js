@@ -6,9 +6,11 @@ const jwt = require('jsonwebtoken');
 const usersJsonFile = "src/assets/bin/users/users.json";
 
 const login = (req, res) => {
-    const {phone, password} = req.body;
+    let {phone, password} = req.body;
     
     let users = JSON.parse(rawdata);
+    if(phone.includes('+'))
+        phone = phone.replace('+', '');
     const user = users.find(user => user.phone === phone);
     if(user && bcrypt.compareSync(password, user.password)) {
         const { id } = user;
@@ -80,12 +82,13 @@ const register = (req, res) => {
     }
 }
 
-const loginOrRegister = (req, res) => {
+const generatePin = (req, res) => {
     const {phone} = req.body;
     let users = JSON.parse(rawdata);
     const user = users.find(user => user.phone === phone);
     if(user) {
-        // generate password  and token withou expires
+        
+        const { id } = user;
         
         const password = generatePinVerify();
         const hashPassword = bcrypt.hashSync(password.toString(), 10);
@@ -113,6 +116,6 @@ const generatePinVerify = () => {
 module.exports = {
     login,
     register,
-    loginOrRegister,
+    generatePin,
     logout
 };
