@@ -30,7 +30,10 @@ const login = (req, res) => {
             token
         });
     } 
-    res.json({message: 'Login failed'});
+    res.json({
+        success: false,
+        message: 'Login failed'
+    });
 }
 
 const logout = (req, res) => {
@@ -68,7 +71,7 @@ const register = (req, res) => {
             name,
             phone,
             email,
-            hashPassword,
+            password: hashPassword,
             photo,
             token: ''
         });

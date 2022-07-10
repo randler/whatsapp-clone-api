@@ -14,30 +14,6 @@
                 "readed": false,
                 "delivered": false,
                 "photo": "https://u42.com.br/wp-content/uploads/2021/04/Viuva-Negra-Scarlet-Johansson.jpg"
-            },
-            {
-                "id": 5,
-                "name": "Dr Strange",
-                "phone": "+1 (848) 545-3258",
-                "total_unread": 0,
-                "last_message": "Ok I'm ready",
-                "date_time_delivered": "2022-02-07T23:00:00.000Z",
-                "date_time_read": "2022-02-07T23:01:00.000Z",
-                "readed": true,
-                "delivered": true,
-                "photo": "https://scoretracknews.files.wordpress.com/2016/10/doctor-strange-movie-composer-cumberbatch.jpg"
-            },
-            {
-                "id": 5,
-                "name": "Tony Stark",
-                "phone": "+1 (848) 545-3258",
-                "total_unread": 0,
-                "last_message": "Sometimes you gotta run before you can walk.",
-                "date_time_delivered": "2022-03-07T00:03:00.000Z",
-                "date_time_read": "2022-02-07T23:01:02.000Z",
-                "readed": false,
-                "delivered": true,
-                "photo": "https://lumiere-a.akamaihd.net/v1/images/iron-man_dft_m_db79b94b.jpeg"
             }
 
         ] 

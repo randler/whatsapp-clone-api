@@ -46,10 +46,24 @@ const getAllChats = (req, res) => {
 }
 
 const getActiveChats = (req, res) => {
-    res.json({
+
+    const { userId } = req;
+
+    const activeChats = JSON.parse(activeChatsData);
+    const active = activeChats.find(chat => chat.userId === userId);
+
+    if(!active) {
+        return res.json({
+            success: false,
+            status: 'error',
+            message: 'Active Chats not found'
+        });
+    }
+
+    return res.json({
         success: true,
         status: 'ok',
-        data: activeChatsData
+        active
     });
 }
 

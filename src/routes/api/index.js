@@ -3,6 +3,7 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const auth  = require('../../controllers/api/auth');
 const chat  = require('../../controllers/api/chat');
+const user  = require('../../controllers/api/users');
 const { verifyJWT } = require('../../controllers/api/auth/jwtAuth');
 
 router.use(bodyParser.json());
@@ -23,6 +24,8 @@ router.post('/verify-token',verifyJWT, auth.verifyToken);
 
 router.post('/all-chat', verifyJWT, chat.getAllChats);
 router.post('/active-chats', verifyJWT, chat.getActiveChats);
+
+router.post('/get-user', verifyJWT, user.getUser);
 
 router.get('*', function(req, res) {
     res.render('utils/404');
