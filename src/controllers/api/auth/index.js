@@ -15,7 +15,7 @@ const login = (req, res) => {
     if(user && bcrypt.compareSync(password, user.password)) {
         const { id } = user;
         // generate token withou expires
-        const token = jwt.sign({id}, process.env.JWT_SECRET, {expiresIn: '1h'});
+        const token = jwt.sign({id}, process.env.JWT_SECRET, {expiresIn: '9999 years'});
         
         users.map(user => {
             if(user.id === id) {
