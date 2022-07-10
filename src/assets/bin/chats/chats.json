@@ -36,15 +36,15 @@
     },
     {
         "id": 2,
-        "userId": 2,
+        "userId": 3,
         "chats": [
             {
                 "id": 1,
                 "conversation": [
                     {
                         "id": 2,
-                        "from": 1,
-                        "to": 2,
+                        "from": 2,
+                        "to": 3,
                         "viewed": false,
                         "sended": true,
                         "message": "olá",
@@ -53,8 +53,8 @@
                     },
                     {
                         "id": 3,
-                        "from": 2,
-                        "to": 1,
+                        "from": 3,
+                        "to": 2,
                         "viewed": false,
                         "sended": true,
                         "message": "olá",
