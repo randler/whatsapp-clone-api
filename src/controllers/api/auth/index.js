@@ -82,6 +82,12 @@ const register = (req, res) => {
     }
 }
 
+const verifyToken = (req, res) => {
+    res.json({
+        success: true
+    });
+}
+
 const generatePin = (req, res) => {
     const {phone} = req.body;
     let users = JSON.parse(rawdata);
@@ -117,5 +123,6 @@ module.exports = {
     login,
     register,
     generatePin,
+    verifyToken,
     logout
 };
