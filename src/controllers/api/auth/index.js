@@ -12,6 +12,7 @@ const login = (req, res) => {
     const user = users.find(user => user.phone === phone);
     if(user && bcrypt.compareSync(password, user.password)) {
         const { id } = user;
+        // generate token withou expires
         const token = jwt.sign({id}, process.env.JWT_SECRET, {expiresIn: '1h'});
         
         users.map(user => {
@@ -26,7 +27,7 @@ const login = (req, res) => {
             token
         });
     } 
-    res.status(500).json({message: 'Login failed'});
+    res.json({message: 'Login failed'});
 }
 
 const logout = (req, res) => {
@@ -48,7 +49,7 @@ const logout = (req, res) => {
         });
     }
 
-    res.status(500).json({message: 'Logout failed'});
+    res.json({message: 'Logout failed'});
 }
 
 const register = (req, res) => {
@@ -73,7 +74,7 @@ const register = (req, res) => {
             token: ''
         });
     } else {
-        res.status(500).json({message: 'User already exists'});
+        res.json({message: 'User already exists'});
     }
 }
 

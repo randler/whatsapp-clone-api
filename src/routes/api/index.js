@@ -19,8 +19,8 @@ router.post('/login', auth.login);
 router.post('/logout', auth.logout);
 router.post('/register', auth.register);
 
-router.get('/all-chat', verifyJWT, chat.getAllChats);
-router.get('/active-chats', verifyJWT, chat.getActiveChats);
+router.post('/all-chat', verifyJWT, chat.getAllChats);
+router.post('/active-chats', verifyJWT, chat.getActiveChats);
 
 router.get('*', function(req, res) {
     res.render('utils/404');

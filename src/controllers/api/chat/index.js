@@ -9,13 +9,14 @@ const jwt = require('jsonwebtoken');
 
 const getAllChats = (req, res) => {
 
-    const {userId, chatId} = req.body;
+    const {chatId} = req.body;
+    const {userId} = req;
 
-    if(!chatId || !userId) {
-        return res.status(400).json({
+    if(!chatId) {
+        return res.json({
             success: false,
             status: 'error',
-            message: 'Missing userId or chatId'
+            message: 'Missing chatId'
         });
     }
     
@@ -30,7 +31,7 @@ const getAllChats = (req, res) => {
     });
 
     if(!chat) {
-        return res.status(400).json({
+        return res.json({
             success: false,
             status: 'error',
             message: 'Chat not found'
