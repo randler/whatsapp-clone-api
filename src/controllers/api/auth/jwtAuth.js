@@ -49,6 +49,7 @@
       }
       
       req.userId = decoded.id;
+      req.token = token;
       next();
     });
 }

@@ -83,8 +83,17 @@ const register = (req, res) => {
 }
 
 const verifyToken = (req, res) => {
-    res.json({
-        success: true
+    const {token} = req;
+
+    let users = JSON.parse(rawdata);
+    const user = users.find(user => user.token === token);
+    if(user) {
+        return res.json({
+            success: true
+        });
+    }
+    return res.json({
+        success: false
     });
 }
 
