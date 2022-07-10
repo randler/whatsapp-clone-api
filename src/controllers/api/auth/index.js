@@ -18,12 +18,13 @@ const login = (req, res) => {
         users.map(user => {
             if(user.id === id) {
                 user.token = token;
+                user.vefiryed = true;
             }
         });
         fs.writeFileSync(usersJsonFile, JSON.stringify(users));
 
         return res.json({
-            auth: true,
+            success: true,
             token
         });
     } 
@@ -37,6 +38,7 @@ const logout = (req, res) => {
     users.map(user => {
         if(user.id === id) {
             user.token = '';
+            user.vefiryed = false;
             finded = true;
         }
     });
@@ -44,7 +46,7 @@ const logout = (req, res) => {
     if(finded) {
         fs.writeFileSync(usersJsonFile, JSON.stringify(users));
         return res.json({
-            auth: false,
+            success: false,
             token: ''
         });
     }
@@ -70,7 +72,7 @@ const register = (req, res) => {
         });
         fs.writeFileSync(usersJsonFile, JSON.stringify(users));
         res.json({
-            auth: true,
+            success: true,
             token: ''
         });
     } else {
@@ -78,8 +80,39 @@ const register = (req, res) => {
     }
 }
 
+const loginOrRegister = (req, res) => {
+    const {phone} = req.body;
+    let users = JSON.parse(rawdata);
+    const user = users.find(user => user.phone === phone);
+    if(user) {
+        // generate password  and token withou expires
+        
+        const password = generatePinVerify();
+        const hashPassword = bcrypt.hashSync(password.toString(), 10);
+        
+        users.map(user => {
+            if(user.id === id) {
+                user.token = '';
+                user.password = hashPassword;
+                user.vefiryed = false;
+            }
+        });
+        fs.writeFileSync(usersJsonFile, JSON.stringify(users));
+        return res.json({
+            success: true,
+            pin: password
+        });
+    }
+}
+
+const generatePinVerify = () => {
+    //generate 4 digit pin
+    return Math.floor(1000 + Math.random() * 9000);
+}
+
 module.exports = {
     login,
     register,
+    loginOrRegister,
     logout
 };

@@ -18,6 +18,7 @@ router.get('/', (req, res, next) => {
 router.post('/login', auth.login);
 router.post('/logout', auth.logout);
 router.post('/register', auth.register);
+router.post('/generate-pin', auth.loginOrRegister);
 
 router.post('/all-chat', verifyJWT, chat.getAllChats);
 router.post('/active-chats', verifyJWT, chat.getActiveChats);
