@@ -1,0 +1,265 @@
+.container{
+    position:relative;
+    animation: animatebottom 2s
+}
+    
+@keyframes animatebottom {
+    from{
+        bottom: -50px;
+        opacity: 0.5;
+    } 
+    to{
+        bottom: 0;
+        opacity:1;
+    }
+}
+
+body {
+    background-image: url('/images/fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/* Definindo css para tamanho de dispositivo*/
+@media only screen and (max-width: 768px) {
+    #quadroRoxo {
+        max-width: 75% !important;
+    }
+}
+/* Definindo css para tamanho de dispositivo*/
+@media only screen and (max-width: 600px) {
+    #quadroRoxo {
+        max-width: 100% !important;
+    }
+}
+
+/* Definindo css para tamanho de dispositivo*/
+@media only screen and (min-width: 1200px) {
+    #quadroRoxo {
+        max-width: 490px !important;
+    }
+}
+
+.container-address {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.icon-gps {
+    margin-right: 10px;
+}
+
+
+#quadroRoxo {
+    max-width: 60%;
+    background-color: rgba(44,42,54,0.8);
+    background-size: 128px;
+    background-position: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+#logoCafeteria {
+    margin-top: 1cm;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+}
+
+#apresentacao {
+    text-align: center;
+    color: white;
+}
+
+#titulo {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+#subtitulo {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+#divisor01 {
+    width: 30px;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+
+#cardapio {
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+
+
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.title-product:hover {
+    color: #ffc107;
+
+}
+
+.title-product {
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: white;
+    transition: color 1s ease-out 10ms
+}
+
+h3,
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.container-img {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 200px;
+    width: 200px;
+    object-fit: fill;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+.container-desc {
+    flex: 3;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc > p {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    text-align: start;
+    color: white;
+}
+
+.desc-litters {
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    justify-content: center;
+    color: white;
+}
+
+.desc {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+}
+
+#produto2, #produto4 {
+    height: 200px;
+    width: 200px;
+    border-radius: 10%;
+    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#divisorProdutos {
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    width: 80px;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+#divisorCardapio {
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border: 2px solid white;
+    border-radius: 2px;
+}
+
+.login {
+    position: absolute;
+    right: 0;
+    height: 30px;
+    padding-right: 20px;
+}
+
+.login-header a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+
+.route-api {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+}
+
+.container-404 {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title-404 {
+    font-size: 55px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: white;
+}

@@ -21,6 +21,7 @@
     "nodemon": "^2.0.19",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
-    "start": "^5.1.0"
+    "start": "^5.1.0",
+    "swagger-ui-express": "^4.5.0"
   }
 }
